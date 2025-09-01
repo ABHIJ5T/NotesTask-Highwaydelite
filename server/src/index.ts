@@ -7,7 +7,8 @@ import notesRoutes from './routes/notes';
 
 dotenv.config();
 const app = express();
-app.use(cors({ origin: 'http://localhost:5173' }));
+// app.use(cors({ origin: 'http://localhost:5173' }));
+app.use(cors()); // to accept request from other sites
 app.use(express.json());
 
 const mongoUri = process.env.MONGO_URI;
